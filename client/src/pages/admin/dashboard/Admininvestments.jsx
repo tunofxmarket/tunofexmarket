@@ -83,7 +83,7 @@ function Admininvestments() {
   const API_BASE_URL =
     window.location.origin === "http://localhost:5173"
       ? "http://localhost:3000"
-      : "https://alliancefxmarket.onrender.com";
+      : "https://tunofexmarket.onrender.com";
 
   // Fetch investments
   useEffect(() => {
@@ -135,7 +135,7 @@ function Admininvestments() {
     const API_BASE_URL =
       window.location.origin === "http://localhost:5173"
         ? "http://localhost:3000"
-        : "https://alliancefxmarket.onrender.com";
+        : "https://tunofexmarket.onrender.com";
 
     try {
       const response = await fetch(`${API_BASE_URL}/admin/investments/`, {
@@ -282,7 +282,7 @@ function Admininvestments() {
             <Adminprofile />
           </div>
           <div className="manage__plansTable mt-8">
-            <div className="managePlans__btns py-6 flex flex-col md:flex-row justify-between items-center">
+            <div className="managePlans__btns mt-12 py-6 flex flex-col md:flex-row justify-between items-center">
               <button
                 className="plan bg-secondary-light px-5 py-3 font-bold rounded-sm hover:bg-secondary hover:text-white duration-200"
                 onClick={handleModal}
@@ -364,8 +364,8 @@ function Admininvestments() {
         {/* Modal */}
         {openModal && (
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
-            <div className="modal__content mx-auto bg-white py-12 px-8 w-full max-w-lg rounded-md shadow-md">
-              <div className="modal__title bg-secondary-light py-3 px-5 uppercase text-lg font-bold text-gray-700 text-center">
+            <div className="modal__content mx-auto bg-white mt-28 md:mt-0 py-12 px-8 w-full max-w-lg rounded-md shadow-md">
+              <div className="modal__title bg-secondary-light py-2 md:py-3 px-5 uppercase text-lg font-bold text-gray-700 text-center">
                 <h3>Add Investment Plan</h3>
               </div>
               <form onSubmit={handleFormSubmit}>
@@ -378,7 +378,7 @@ function Admininvestments() {
                       value={formData.planName}
                       onChange={handleInputChange}
                       placeholder="Enter Plan Name"
-                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-3"
+                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-2 md:py-3"
                       required
                     />
                   </div>
@@ -390,7 +390,7 @@ function Admininvestments() {
                       value={formData.minimumDeposit}
                       onChange={handleInputChange}
                       placeholder="500"
-                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-3"
+                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-2 md:py-3"
                       required
                     />
                   </div>
@@ -402,7 +402,7 @@ function Admininvestments() {
                       value={formData.minimumDuration}
                       onChange={handleInputChange}
                       placeholder="6 months"
-                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-3"
+                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-2 md:py-3"
                       required
                     />
                   </div>
@@ -414,7 +414,7 @@ function Admininvestments() {
                       value={formData.minimumReturns}
                       onChange={handleInputChange}
                       placeholder="5%"
-                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-3"
+                      className="bg-gray-100 focus:ring-0 rounded-md text-gray-600 font-bold py-2 md:py-3"
                       required
                     />
                   </div>
@@ -422,7 +422,7 @@ function Admininvestments() {
                     <button
                       type="button"
                       onClick={handleCloseModal}
-                      className="bg-red-100 w-[50%] text-red-600 px-5 py-3 rounded-sm font-bold hover:bg-red-300"
+                      className="bg-red-100 w-[50%] text-red-600 px-5 py-2 md:py-3 rounded-sm font-bold hover:bg-red-300"
                     >
                       Cancel
                     </button>
@@ -430,7 +430,7 @@ function Admininvestments() {
                       type="submit"
                       className="bg-secondary-light w-[50%] text-gray-700 px-5 py-3 rounded-sm font-bold hover:bg-secondary-dark hover:text-white duration-200"
                     >
-                      Add Investment Plan
+                      Add Plan
                     </button>
                   </div>
                 </div>

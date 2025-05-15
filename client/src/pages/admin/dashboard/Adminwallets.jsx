@@ -66,7 +66,7 @@ function AdminWallets() {
       const API_BASE_URL =
         window.location.origin === "http://localhost:5173"
           ? "http://localhost:3000"
-          : "https://alliancefxmarket.onrender.com";
+          : "https://tunofexmarket.onrender.com";
 
       const response = await fetch(
         `${API_BASE_URL}/wallets/updateWallets/${selectedWallet._id}`,
@@ -115,7 +115,7 @@ function AdminWallets() {
       const API_BASE_URL =
         window.location.origin === "http://localhost:5173"
           ? "http://localhost:3000"
-          : "https://alliancefxmarket.onrender.com";
+          : "https://tunofexmarket.onrender.com";
 
       const response = await fetch(
         `${API_BASE_URL}/wallets/deleteWallets/${deleteWalletId}`,
@@ -151,7 +151,7 @@ function AdminWallets() {
       const API_BASE_URL =
         window.location.origin === "http://localhost:5173"
           ? "http://localhost:3000"
-          : "https://alliancefxmarket.onrender.com";
+          : "https://tunofexmarket.onrender.com";
 
       const response = await fetch(`${API_BASE_URL}/wallets/getWallets`, {
         method: "GET",
@@ -212,7 +212,7 @@ function AdminWallets() {
       const API_BASE_URL =
         window.location.origin === "http://localhost:5173"
           ? "http://localhost:3000"
-          : "https://alliancefxmarket.onrender.com";
+          : "https://tunofexmarket.onrender.com";
 
       const response = await fetch(`${API_BASE_URL}/wallets/addWallets`, {
         method: "POST",
@@ -244,7 +244,7 @@ function AdminWallets() {
   };
 
   return (
-    <main className="p-6">
+    <main className="px-2 py-2 md:p-6">
       <h2 className="text-3xl font-bold text-gray-700 mb-6">Manage Wallets</h2>
 
       {message && (
@@ -270,12 +270,12 @@ function AdminWallets() {
         <p>Loading wallets...</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left text-gray-500">
+          <table className="min-w-full text-sm text-left text-gray-500">
             <thead className="text-xs text-gray-700 uppercase bg-gray-100">
               <tr>
-                <th className="px-6 py-3">Cryptocurrency</th>
-                <th className="px-6 py-3">Wallet Address</th>
-                <th className="px-6 py-3 text-center">Actions</th>
+                <th className="px-2 py-2">Cryptocurrency</th>
+                <th className="px-2 py-2">Wallet Address</th>
+                <th className="px-2 py-2 text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -293,7 +293,7 @@ function AdminWallets() {
                     {wallet.name}
                   </td>
                   <td className="px-6 py-4">{wallet.address}</td>
-                  <td className="px-6 py-4 text-center space-x-2">
+                  <td className="px-2 py-2 flex text-center space-x-2">
                     <button
                       onClick={() => handleCopy(wallet.address)}
                       className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"

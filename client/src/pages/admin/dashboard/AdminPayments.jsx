@@ -15,24 +15,18 @@ function AdminPayments() {
   const [messageType, setMessageType] = useState("");
   const [manualPlanName, setManualPlanName] = useState("");
   const [manualAmount, setManualAmount] = useState(0);
-  const [durationDays, setDurationDays] = useState(0); // Changed from months to days
-  const [roiPercentage, setRoiPercentage] = useState(0); // New ROI input
+  const [durationDays, setDurationDays] = useState(0);
+  const [roiPercentage, setRoiPercentage] = useState(0);
 
   const API_BASE_URL =
     window.location.origin === "http://localhost:5173"
       ? "http://localhost:3000"
-      : "https://alliancefxmarket.onrender.com";
+      : "https://tunofexmarket.onrender.com";
 
   useEffect(() => {
     const fetchData = async () => {
-      const API_BASE_URL =
-        window.location.origin === "http://localhost:5173"
-          ? "http://localhost:3000"
-          : "https://alliancefxmarket.onrender.com";
-
       try {
         setLoading(true);
-
         const [investorsRes, plansRes] = await Promise.all([
           fetch(
             `${API_BASE_URL}/user/fetchUsers?page=${currentPage}&limit=${usersPerPage}`
@@ -59,6 +53,7 @@ function AdminPayments() {
 
     fetchData();
   }, [currentPage]);
+
   const showMessage = (text, type) => {
     setMessage({ text, type });
     setTimeout(() => setMessage({ text: "", type: "" }), 3000);
@@ -69,7 +64,6 @@ function AdminPayments() {
     setInvestorModal(true);
   };
 
-  // Handle activation
   const handleActivateInvestor = async () => {
     if (!selectedInvestor?._id) {
       console.error("Investor ID is missing");
@@ -103,8 +97,6 @@ function AdminPayments() {
     }
 
     try {
-      console.log("Request Payload:", JSON.stringify(requestBody, null, 2));
-
       const response = await fetch(
         `${API_BASE_URL}/admin/investments/activate`,
         {
@@ -149,7 +141,7 @@ function AdminPayments() {
 
   return (
     <main>
-      <div className="w-full p-6">
+      <div className="w-full py-6 px-2">
         <h3 className="text-3xl font-bold text-gray-500">Manage Deposits</h3>
         {message && (
           <div
@@ -157,23 +149,23 @@ function AdminPayments() {
               messageType === "success" ? "bg-green-500" : "bg-red-500"
             }`}
           >
-            {message}
+            {message.text}
           </div>
         )}
 
-        <div className="relative shadow-md sm:rounded-lg overflow-visible mt-6">
+        <div className="relative shadow-md sm:rounded-lg overflow-x-auto mt-6">
           {loading ? (
             <p className="text-center text-gray-500">Loading...</p>
           ) : (
             <>
-              <table className="w-full text-sm text-left text-gray-500">
+              <table className="w-full text-sm text-left text-gray-500 min-w-[600px]">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                   <tr>
-                    <th className="px-6 py-3">Investor Name</th>
-                    <th className="px-6 py-3">Investment Plan</th>
-                    <th className="px-6 py-3">Investment Amount</th>
-                    <th className="px-6 py-3">Investment ROI</th>
-                    <th className="px-6 py-3 text-center">Actions</th>
+                    <th className="px-1 py-3">Investor Name</th>
+                    <th className="px-1 py-3">Investment Plan</th>
+                    <th className="px-1 py-3">Investment Amount</th>
+                    <th className="px-1 py-3">Investment ROI</th>
+                    <th className="px-1 py-3 text-center">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -183,27 +175,26 @@ function AdminPayments() {
                         key={investor._id}
                         className="bg-white border-b hover:bg-gray-50"
                       >
-                        <td className="px-6 py-4 font-medium text-gray-900">
+                        <td className="px-1 py-2 font-medium text-gray-900">
                           {investor.fullName || "N/A"}
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-1 py-2">
                           {investor.planName ||
                             investmentPlans?.find(
                               (plan) => plan?._id === investor?.planId
                             )?.planName ||
                             "N/A"}
                         </td>
-
-                        <td className="px-6 py-4">
+                        <td className="px-1 py-2">
                           ${investor.amountInvested || "0.00"}
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-1 py-2">
                           ${investor.expectedReturns || 0}
                         </td>
-                        <td className="px-6 py-4 text-center">
+                        <td className="px-1 py-2 text-center">
                           <button
                             onClick={() => handleInvestorModal(investor)}
-                            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+                            className="px-1 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
                           >
                             Pay Investor
                           </button>
@@ -223,8 +214,7 @@ function AdminPayments() {
                 </tbody>
               </table>
 
-              {/* ✅ Pagination Controls */}
-              <div className="flex justify-between items-center mt-6">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-2 py-2 md:mt-6">
                 <button
                   onClick={() =>
                     setCurrentPage((prev) => Math.max(prev - 1, 1))
@@ -263,8 +253,8 @@ function AdminPayments() {
       </div>
 
       {investorModal && selectedInvestor && (
-        <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50">
-          <div className="bg-white shadow-lg rounded-md p-6 w-96">
+        <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 px-4">
+          <div className="bg-white shadow-lg rounded-md p-6 w-full max-w-md mx-auto">
             <h3 className="text-xl font-bold text-gray-700 text-center">
               Activate Investor
             </h3>
@@ -272,7 +262,6 @@ function AdminPayments() {
               {selectedInvestor.fullName || "Unknown Investor"}
             </p>
 
-            {/* Radio Button to Choose Mode */}
             <div className="flex justify-between mt-4">
               <label className="flex items-center space-x-2">
                 <input
@@ -292,7 +281,7 @@ function AdminPayments() {
                   value="manual"
                   checked={selectedPlan === "manual"}
                   onChange={() => setSelectedPlan("manual")}
-                  className="h-5 w-5 text-secondary-dark border-gray-300 ring-2 ring-secondary-dark focus:ring-2 focus:ring-secondary-dark  focus:outline-none"
+                  className="h-5 w-5 text-secondary-dark border-gray-300 ring-2 ring-secondary-dark focus:ring-2 focus:ring-secondary-dark focus:outline-none"
                 />
                 <span className="text-gray-700 font-medium">
                   Enter Manually
@@ -300,7 +289,6 @@ function AdminPayments() {
               </label>
             </div>
 
-            {/* If Selecting a Plan */}
             <select
               className="w-full mt-4 p-2 border rounded-md"
               value={selectedPlan}
@@ -315,7 +303,6 @@ function AdminPayments() {
               <option value="manual">Enter Manually</option>
             </select>
 
-            {/* If Entering Manually */}
             {selectedPlan === "manual" && (
               <div className="mt-8">
                 <label className="block text-gray-700 text-sm font-medium">
@@ -363,7 +350,6 @@ function AdminPayments() {
               </div>
             )}
 
-            {/* Buttons */}
             <div className="flex justify-between mt-6">
               <button
                 onClick={() => setInvestorModal(false)}

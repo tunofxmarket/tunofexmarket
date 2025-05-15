@@ -10,7 +10,7 @@ export const sendInvoiceEmail = async (email, invoicePath, invoiceUrl) => {
   try {
     const baseUrl =
       process.env.NODE_ENV === "production"
-        ? "https://alliancefxmarket.onrender.com"
+        ? "https://tunofexmarket.onrender.com"
         : "http://localhost:3000";
 
     const fullInvoiceUrl = `${baseUrl}${invoiceUrl}`;

@@ -84,7 +84,7 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "https://alliancefxmarket.onrender.com/user/signup",
+        "https://tunofexmarket.onrender.com/user/signup",
         {
           method: "POST",
           headers: {

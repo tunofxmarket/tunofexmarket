@@ -32,7 +32,7 @@ function AdminSignup() {
     const API_BASE_URL =
       window.location.origin === "http://localhost:5173"
         ? "http://localhost:3000"
-        : "https://alliancefxmarket.onrender.com";
+        : "https://tunofexmarket.onrender.com";
     try {
       const response = await axios.post(
         `${API_BASE_URL}/admin/register`,

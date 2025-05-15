@@ -22,7 +22,7 @@ function Withdrawal() {
   const API_BASE_URL =
     window.location.origin === "http://localhost:5173"
       ? "http://localhost:3000"
-      : "https://alliancefxmarket.onrender.com";
+      : "https://tunofexmarket.onrender.com";
   useEffect(() => {
     const storedAuthToken = localStorage.getItem("authToken");
 

@@ -10,7 +10,7 @@ import axios from "axios";
 function Forgotpassword({ setIsAuthenticated }) {
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   // Attempt to get the email from location state, or default to an empty string
   const initialEmail = location.state?.email || ""; // Check if the email is in state
   const [email, setEmail] = useState(initialEmail);
@@ -32,10 +32,13 @@ function Forgotpassword({ setIsAuthenticated }) {
     const API_BASE_URL =
       window.location.origin === "http://localhost:5173"
         ? "http://localhost:3000"
-        : "https://alliancefxmarket.onrender.com";
+        : "https://tunofexmarket.onrender.com";
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/user/forgot-password`, { email });
+      const response = await axios.post(
+        `${API_BASE_URL}/user/forgot-password`,
+        { email }
+      );
       if (response && response.data) {
         setSuccess(response.data.message); // Success message
         setError(null);
@@ -65,7 +68,8 @@ function Forgotpassword({ setIsAuthenticated }) {
                 Forgotten Your Password?
               </h2>
               <p className="text-secondary-light text-xl mt-3">
-                Enter your email address below and we'll send you a link to reset your password.
+                Enter your email address below and we'll send you a link to
+                reset your password.
               </p>
             </div>
             <div className="bottom w-full">
@@ -113,7 +117,8 @@ function Forgotpassword({ setIsAuthenticated }) {
                   >
                     {loading ? (
                       <>
-                        <Spinner size="sm" color="white" /> Resetting password...
+                        <Spinner size="sm" color="white" /> Resetting
+                        password...
                       </>
                     ) : (
                       "Reset Password"

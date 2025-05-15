@@ -59,7 +59,7 @@ function AdminLayout() {
       </aside>
 
       {/* Main content */}
-      <div className="mainarea flex-1 bg-white w-full lg:w-4/5 p-4 mt-2 lg:mt-0">
+      <div className="mainarea flex-1 bg-white w-full lg:w-4/5 px-2 mt-2 lg:mt-0">
         <div className="mainArea__content p-2 md:p-5">
           <Outlet />
         </div>
