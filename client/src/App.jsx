@@ -1,3 +1,4 @@
+import "./i18n"; // This must be above everything else
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,

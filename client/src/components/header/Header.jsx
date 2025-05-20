@@ -2,27 +2,29 @@ import React, { useEffect } from "react";
 import { Collapse } from "flowbite";
 import { links } from "../../data";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Header() {
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+  const navLinks = links(t);
+
+  // ✅ Fix: use startsWith instead of ===
+  const changeLanguage = () => {
+    const currentLang = i18n.language.startsWith("fr") ? "fr" : "en";
+    const newLang = currentLang === "en" ? "fr" : "en";
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
-    // Target the navbar element
     const $targetEl = document.getElementById("navbar-sticky");
-
-    // Toggle button
     const $triggerEl = document.querySelector(
       '[data-collapse-toggle="navbar-sticky"]'
     );
-
-    // Initialize the collapse instance
     const collapse = new Collapse($targetEl, $triggerEl);
-
-    // Clean up the collapse instance when the component unmounts
     return () => {
-      if (collapse) {
-        collapse.destroy();
-      }
+      if (collapse) collapse.destroy();
     };
   }, []);
 
@@ -41,7 +43,7 @@ function Header() {
             </span>
           </a>
 
-          {/* Login, Get Started buttons and mobile menu toggle */}
+          {/* Buttons and Language Switch */}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="inline-block flex gap-4">
               <Link to="/signin">
@@ -49,7 +51,7 @@ function Header() {
                   type="button"
                   className="text-primary outline outline-2 outline-secondary-light hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Login
+                  {t("auths.login")}
                 </button>
               </Link>
               <Link to="/signup">
@@ -57,10 +59,19 @@ function Header() {
                   type="button"
                   className="text-primary font-bold bg-secondary-light hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Get started
+                  {t("auths.getStarted")}
                 </button>
               </Link>
+              {/* 🌍 Language Toggle Button */}
+              <button
+                onClick={changeLanguage}
+                className="text-gray-700 border border-gray-300 hover:bg-gray-100 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700"
+              >
+                {i18n.language.startsWith("fr") ? "EN" : "FR"}
+              </button>
             </div>
+
+            {/* Mobile Menu Toggle */}
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -87,13 +98,13 @@ function Header() {
             </button>
           </div>
 
-          {/* Navigation links */}
+          {/* Navigation Links */}
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              {links.map((link, index) => (
+              {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     className={

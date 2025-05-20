@@ -1,0 +1,210 @@
+{
+  "navbar": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "forgot_password": "Forgot your password?"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Hello, {{name}}!",
+    "stats": "Here are your statistics",
+    "active_users": "Active Users",
+    "revenue": "Revenue"
+  },
+  "forms": {
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "notifications": {
+    "success": "Action completed successfully!",
+    "error": "Something went wrong. Please try again."
+  },
+  "hero": {
+    "title": "One Platform unlimited Potential",
+    "subtitle": "Our Platform lays the groundwork so you can focus on a future of financial freedom"
+  },
+  "perks": {
+    "trusted": "Trusted & Regulated",
+    "fast": "Fast Deposit & Withdrawal",
+    "risk": "Risk Management",
+    "support": "24/7 Customer Support"
+  },
+
+  "track": {
+    "years": "Years in the Market",
+    "withdrawals": "Withdrawals",
+    "events": "Events",
+    "assets": "Trading Assets"
+  },
+  "invest": {
+    "createAccount": {
+      "title": "Create an Account",
+      "text": "Your first step to financial freedom is by creating an account with us."
+    },
+    "choosePackage": {
+      "title": "Choose a Package",
+      "text": "Start investing by choosing a package that suits your budget/trading strategies and easily make deposits with reliable payment channels."
+    },
+    "trade": {
+      "title": "Trade",
+      "text": "Once deposit is confirmed, trades can immediately be placed with instant live updates."
+    }
+  },
+
+  "investing": {
+    "getStarted": "Get Started"
+  },
+
+  "whyChoose": {
+    "securedRegulated": "Secured & Regulated",
+    "awardWinning": "Award Winning",
+    "leverage": "Leverage",
+    "advancedPlatform": "Advanced Trading Platform",
+    "tradingInstruments": "500+ Trading Instruments"
+  },
+
+  "tradingAssets": {
+    "instantTrading": {
+      "title": "Instant Trading",
+      "text": "Deposit is confirmed immediately after successful transaction to fund the account and trading can start instantly."
+    },
+    "safeSecure": {
+      "title": "Safe and Secure",
+      "text": "Encryption of account is taken to a high degree for best secure protection."
+    },
+    "bitcoin": {
+      "title": "Bitcoin Transaction",
+      "text": "Encryption of account is taken to a high degree for best secure protection."
+    }
+  },
+
+  "testimonials": {
+    "sarah": {
+      "designation": "Novice Trader",
+      "text": "I was new to Investing and felt overwhelmed by the complexity of the market. But this company made it easy for me to get started. Their platform is user-friendly, and the educational resources are top-notch. Within a few months, I started seeing consistent profits. The support team is always available to answer my questions. I couldn’t have asked for a better trading partner!"
+    },
+    "james": {
+      "designation": "Experienced Investor",
+      "text": "Switching to this company was the best decision I made for my investment portfolio. Their advanced tools and real-time market insights have given me a significant edge in my returns. I appreciate the transparency and security they provide, which is crucial in today’s volatile markets. Highly recommended for both beginners and seasoned traders!"
+    },
+    "emily": {
+      "designation": "Professional Trader",
+      "text": "I've been investing for years, but it wasn't until I joined this company that I truly started to maximize my potential. Their innovative trading strategies and automated tools have helped me make informed decisions with confidence. I also love their community of traders, where I can share ideas and get advice. It’s more than just a trading platform; it’s a comprehensive trading experience."
+    }
+  },
+
+  "testimonial": {
+    "title": "Public Cheer for us",
+    "subtitle": "What Investors are saying about us..."
+  },
+
+  "difference": {
+    "title": "What Makes Tunofex Fx Market Different?",
+    "1": {
+      "title": "We Want You to Succeed",
+      "text": "Learn from the best with our wide range of educational tools, economic calendar, technical and fundamental analysis and important market updates you don’t want to miss."
+    },
+    "2": {
+      "title": "We Believe in Endless Possibilities",
+      "text": "Access the world’s most popular instruments, ranging from forex pairs to cryptocurrencies - all at the palm of your hand."
+    },
+    "3": {
+      "title": "We Provide Our Traders With Superior Trading Conditions",
+      "text": "No restrictions on short selling and scalping as well as ultra-low spreads."
+    },
+    "4": {
+      "title": "We Value Your Time",
+      "text": "Enjoy fast and reliable order execution and a 24-hour live customer service."
+    },
+    "5": {
+      "title": "We Believe You Deserve The Best",
+      "text": "Take advantage of our Expert Advisors and Copy Trading platforms as well as 24/7 cryptocurrency trading."
+    },
+    "6": {
+      "title": "We Never Compromise",
+      "text": "With regulatory licenses across 6 jurisdictions, we will ensure a hassle-free trading experience."
+    }
+  },
+  "help": {
+    "title": "Need Help with your Trading Account?",
+    "button": "Contact Us"
+  },
+
+  "trusted": {
+    "title": "Trusted by",
+    "trustedAlt": "Companies that trust us",
+    "award": "Award winner",
+    "awardAlt": "Awards"
+  },
+
+  "footer": {
+    "about": "Our goal is to prioritise a seamless customer service experience to our customers, who are paramount to our business...",
+    "headings": {
+      "usefulLinks": "USEFUL LINKS",
+      "documents": "DOCUMENTS",
+      "contact": "CONTACT"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "plans": "Plans",
+      "login": "Login",
+      "register": "Register",
+      "contact": "Contact"
+    },
+    "documents": {
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "assets": "Trading Assets",
+      "payment": "Payment Policy",
+      "faq": "FAQ"
+    },
+    "contact": {
+      "address1": "Tunofex Fx Market, 70 w. Madison Street, Ste. 1400 Chicago, 1160602",
+      "address2": "support@tunofexfxmarket.com"
+    },
+    "copyright": "All Rights Reserved."
+  },
+
+  "navigation": {
+    "home": "Home",
+    "company": "Company",
+    "trading": "Trading",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "plans": "Plans",
+    "about": "About",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "assets": "Trading Assets",
+    "payment": "Payment Policy",
+    "faq": "FAQ",
+    "useful_links": "Useful Links",
+    "documents": "Documents",
+    "contact_title": "Contact"
+  },
+
+  "auths": {
+    "login": "Login",
+    "getStarted": "Get started"
+  },
+
+  "invests": {
+    "stepsTitle": "3 Steps to Invest",
+    "sectionTitle": "HOW TO INVEST",
+    "sectionDescription": "To start trading, fund your account with reliable payment channels and withdraw quickly with the fastest payout methods."
+  },
+
+  "trading": {
+    "whyChooseUs": "Why Choose Us"
+  }
+}

@@ -1,10 +1,13 @@
 import React from "react";
 import { trackRecords } from "../../data";
+import { useTranslation } from "react-i18next";
 
 function TrackRecords() {
+  const { t } = useTranslation();
+
   return (
     <div className="trackRecordWrapper w-full flex justify-center">
-      <div className="trackRecord w-4/5 py-10 md:w-11/12 md:px-5  md:flex lg:flex justify-center items-center">
+      <div className="trackRecord w-4/5 py-10 md:w-11/12 md:px-5 md:flex lg:flex justify-center items-center">
         {trackRecords.map((track, index) => (
           <div
             key={index}
@@ -14,7 +17,7 @@ function TrackRecords() {
               {track.number}
             </h1>
             <h4 className="text-1xl font-semibold text-primary-light md:text-mxl md:text-1xl">
-              {track.name}
+              {t(track.nameKey)}
             </h4>
           </div>
         ))}

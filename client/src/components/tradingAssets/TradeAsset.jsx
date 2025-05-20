@@ -1,31 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { tradingAssets, whyChoose } from "../../data";
 
 function TradeAsset() {
+  const { i18n, t } = useTranslation();
+  const lang = i18n.language || "en"; // fallback to English
+
   return (
     <div className="innerWrapper flex flex-col w-11/12 lg:w-4/5 py-10 lg:py-20 md:flex-row justify-center items-center mx-auto">
       <div className="assetContent w-full">
         <div className="top w-full gap-10 flex flex-col lg:py-10 md:flex-row lg:flex justify-between">
           <div className="left flex-1">
             <div className="title">
-              <h5 className="uppercase font-bold  text-xl lg:text-2xl py-3">
-                Why choose forex and bitcoin trade?
+              <h5 className="uppercase font-bold text-xl lg:text-2xl py-3">
+                {t("trading.whyChoose", "Why choose forex and bitcoin trade?")}
               </h5>
             </div>
             <div className="text">
               <p className="text-base lg:text-lg">
-                Cryptocurrencies are a borderless means of exchange allowing for
-                instant and cost-effective transactions across the world. There
-                is no waiting, no international fees and no limitations as to
-                who can or cannot send funds to whom or when and where those
-                funds can be accessed.
+                {t(
+                  "trading.description",
+                  "Cryptocurrencies are a borderless means of exchange allowing for instant and cost-effective transactions across the world..."
+                )}
               </p>
             </div>
             <div className="button flex mt-8 lg:mt-12">
               <Link to="/">
                 <button className="rounded-full font-semibold bg-black py-3 lg:py-4 px-8 lg:px-10 border-2 border-transparent text-white text-lg hover:bg-transparent hover:border-2 hover:border-black hover:text-black ">
-                  Trading Assets
+                  {t("trading.button", "Trading Assets")}
                 </button>
               </Link>
             </div>
@@ -39,35 +42,37 @@ function TradeAsset() {
                   </div>
                   <div className="assetText">
                     <h3 className="font-bold text-xl lg:text-2xl uppercase">
-                      {asset.title}
+                      {t(asset.titleKey)}
                     </h3>
-                    <p className="text-base lg:text-lg">{asset.text}</p>
+                    <p className="text-base lg:text-lg">{t(asset.textKey)}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="bottom w-full mt-10 lg:mt-20  flex justify-center">
+
+        {/* Bottom Section */}
+        <div className="bottom w-full mt-10 lg:mt-20 flex justify-center">
           <div className="bottomContent w-full flex flex-col justify-center">
             <div className="bottomTitle lg:py-5">
               <h1 className="text-center uppercase font-extrabold text-3xl lg:font-extrabold lg:text-6xl">
-                Why Choose us
+                {t("trading.whyChooseUs", { defaultValue: "Why Choose Us" })}
               </h1>
             </div>
-            <div className="whys w-full flex ">
-              <div className="whysContent mt-16 w-full  md:flex lg:flex justify-between">
+            <div className="whys w-full flex justify-center">
+              <div className="whysContent mt-16 w-full flex flex-wrap justify-center gap-8">
                 {whyChoose.map((why, index) => (
                   <div
                     key={index}
-                    className="why flex gap-5 py-5 flex-col items-center justify-center"
+                    className="why flex flex-col items-center justify-center text-center w-36 lg:w-48"
                   >
-                    <div className="icon flex text-4xl text-center md:text-6xl lg:text-8xl">
+                    <div className="icon text-4xl md:text-6xl lg:text-7xl text-primary">
                       {React.createElement(why.icon)}
                     </div>
-                    <div className="subtitle">
-                      <p className="text-center font-semibold 2xl">
-                        {why.title}
+                    <div className="subtitle mt-3">
+                      <p className="font-semibold text-base lg:text-lg">
+                        {t(why.titleKey)}
                       </p>
                     </div>
                   </div>

@@ -1,0 +1,209 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "settings": "Paramètres",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "forgot_password": "Mot de passe oublié ?"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "greeting": "Bonjour, {{name}}!",
+    "stats": "Voici vos statistiques",
+    "active_users": "Utilisateurs actifs",
+    "revenue": "Revenu"
+  },
+  "forms": {
+    "submit": "Soumettre",
+    "cancel": "Annuler"
+  },
+  "notifications": {
+    "success": "Action terminée avec succès !",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "hero": {
+    "title": "Une plateforme, un potentiel illimité",
+    "subtitle": "Notre plateforme pose les bases pour que vous puissiez vous concentrer sur un avenir de liberté financière"
+  },
+  "perks": {
+    "trusted": "Fiable et réglementé",
+    "fast": "Dépôt et retrait rapides",
+    "risk": "Gestion des risques",
+    "support": "Support client 24h/24 et 7j/7"
+  },
+
+  "track": {
+    "years": "Années sur le marché",
+    "withdrawals": "Retraits",
+    "events": "Événements",
+    "assets": "Actifs de trading"
+  },
+  "invest": {
+    "createAccount": {
+      "title": "Créer un compte",
+      "text": "Votre première étape vers la liberté financière consiste à créer un compte chez nous."
+    },
+    "choosePackage": {
+      "title": "Choisir un forfait",
+      "text": "Commencez à investir en choisissant un forfait adapté à votre budget/stratégie de trading et effectuez facilement des dépôts via des canaux de paiement fiables."
+    },
+    "trade": {
+      "title": "Trader",
+      "text": "Une fois le dépôt confirmé, les transactions peuvent être immédiatement effectuées avec des mises à jour en direct instantanées."
+    }
+  },
+
+  "investing": {
+    "getStarted": "Commencer"
+  },
+
+  "whyChoose": {
+    "securedRegulated": "Sécurisé et réglementé",
+    "awardWinning": "Récompensé",
+    "leverage": "Effet de levier",
+    "advancedPlatform": "Plateforme de trading avancée",
+    "tradingInstruments": "500+ Instruments de trading"
+  },
+
+  "tradingAssets": {
+    "instantTrading": {
+      "title": "Trading Instantané",
+      "text": "Le dépôt est confirmé immédiatement après une transaction réussie pour financer le compte, et le trading peut commencer instantanément."
+    },
+    "safeSecure": {
+      "title": "Sécurisé et Fiable",
+      "text": "Le chiffrement du compte est réalisé à un niveau élevé pour une meilleure sécurité."
+    },
+    "bitcoin": {
+      "title": "Transaction Bitcoin",
+      "text": "Le chiffrement du compte est réalisé à un niveau élevé pour une meilleure sécurité."
+    }
+  },
+
+  "testimonials": {
+    "sarah": {
+      "designation": "Trader Débutante",
+      "text": "J'étais nouvelle dans l'investissement et me sentais dépassée par la complexité du marché. Mais cette entreprise m'a facilité le démarrage. Leur plateforme est conviviale, et les ressources éducatives sont de premier ordre. En quelques mois, j'ai commencé à voir des bénéfices réguliers. L'équipe de support est toujours disponible pour répondre à mes questions. Je n'aurais pas pu rêver d'un meilleur partenaire de trading !"
+    },
+    "james": {
+      "designation": "Investisseur Expérimenté",
+      "text": "Changer pour cette entreprise a été la meilleure décision pour mon portefeuille d'investissement. Leurs outils avancés et leurs analyses en temps réel m'ont donné un avantage significatif. J'apprécie la transparence et la sécurité qu'ils offrent, ce qui est essentiel dans les marchés volatils actuels. Fortement recommandé pour les débutants comme pour les traders expérimentés !"
+    },
+    "emily": {
+      "designation": "Trader Professionnelle",
+      "text": "J'investis depuis des années, mais ce n'est que lorsque j'ai rejoint cette entreprise que j'ai vraiment commencé à maximiser mon potentiel. Leurs stratégies innovantes et leurs outils automatisés m'ont aidée à prendre des décisions éclairées en toute confiance. J'aime aussi leur communauté de traders, où je peux partager des idées et obtenir des conseils. Ce n'est pas seulement une plateforme de trading, c'est une véritable expérience de trading complète."
+    }
+  },
+
+  "testimonial": {
+    "title": "Acclamations du public pour nous",
+    "subtitle": "Ce que les investisseurs disent de nous..."
+  },
+
+  "difference": {
+    "title": "Qu'est-ce qui rend Tunofex Fx Market différent ?",
+    "1": {
+      "title": "Nous voulons que vous réussissiez",
+      "text": "Apprenez des meilleurs grâce à nos nombreux outils éducatifs, notre calendrier économique, notre analyse technique et fondamentale, et des mises à jour importantes du marché que vous ne voulez pas manquer."
+    },
+    "2": {
+      "title": "Nous croyons aux possibilités infinies",
+      "text": "Accédez aux instruments les plus populaires du monde, allant des paires de devises aux cryptomonnaies – le tout au creux de votre main."
+    },
+    "3": {
+      "title": "Nous offrons à nos traders des conditions de trading supérieures",
+      "text": "Aucune restriction sur la vente à découvert et le scalping, ainsi que des spreads ultra-faibles."
+    },
+    "4": {
+      "title": "Nous valorisons votre temps",
+      "text": "Profitez d'une exécution rapide et fiable des ordres et d'un service client en direct 24h/24."
+    },
+    "5": {
+      "title": "Nous croyons que vous méritez le meilleur",
+      "text": "Profitez de nos conseillers experts et des plateformes de copy trading ainsi que du trading de cryptomonnaies 24h/24 et 7j/7."
+    },
+    "6": {
+      "title": "Nous ne faisons jamais de compromis",
+      "text": "Avec des licences réglementaires dans 6 juridictions, nous vous garantissons une expérience de trading sans tracas."
+    }
+  },
+
+  "help": {
+    "title": "Besoin d’aide avec votre compte de trading ?",
+    "button": "Contactez-nous"
+  },
+
+  "trusted": {
+    "title": "Fiable par",
+    "trustedAlt": "Entreprises qui nous font confiance",
+    "award": "Lauréat de prix",
+    "awardAlt": "Récompenses"
+  },
+
+  "footer": {
+    "about": "Notre objectif est de donner la priorité à une expérience client transparente pour nos clients, qui sont essentiels à notre entreprise...",
+    "headings": {
+      "usefulLinks": "LIENS UTILES",
+      "documents": "DOCUMENTS",
+      "contact": "CONTACT"
+    },
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "plans": "Plans",
+      "login": "Connexion",
+      "register": "S'inscrire",
+      "contact": "Contact"
+    },
+    "documents": {
+      "terms": "Conditions générales",
+      "privacy": "Politique de confidentialité",
+      "assets": "Actifs de trading",
+      "payment": "Politique de paiement",
+      "faq": "FAQ"
+    },
+    "contact": {
+      "address1": "Tunofex Fx Market, 70 w. Madison Street, Ste. 1400 Chicago, 1160602",
+      "address2": "support@tunofexfxmarket.com"
+    },
+    "copyright": "Tous droits réservés."
+  },
+
+  "navigation": {
+    "home": "Accueil",
+    "company": "Entreprise",
+    "trading": "Commerce",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "Inscription",
+    "plans": "Plans",
+    "about": "À propos",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "assets": "Actifs de trading",
+    "payment": "Politique de paiement",
+    "faq": "FAQ",
+    "useful_links": "Liens utiles",
+    "documents": "Documents",
+    "contact_title": "Contact"
+  },
+  "auths": {
+    "login": "Connexion",
+    "getStarted": "Commencer"
+  },
+
+  "invests": {
+    "stepsTitle": "3 étapes pour investir",
+    "sectionTitle": "COMMENT INVESTIR",
+    "sectionDescription": "Pour commencer à trader, approvisionnez votre compte via des canaux fiables et retirez rapidement via les méthodes les plus rapides."
+  },
+  "trading": {
+    "whyChooseUs": "Pourquoi nous choisir"
+  }
+}

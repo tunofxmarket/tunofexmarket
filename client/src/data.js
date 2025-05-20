@@ -25,53 +25,47 @@ import { MdTableChart } from "react-icons/md";
 import { FaBitcoinSign } from "react-icons/fa6";
 import { IoMdLogOut } from "react-icons/io";
 
-export const links = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Company",
-    path: "/company",
-  },
-  { name: "Trading", path: "/trading" },
-  { name: "Contact", path: "/contact" },
+export const links = (t) => [
+  { name: t("navigation.home"), path: "/" },
+  { name: t("navigation.company"), path: "/company" },
+  { name: t("navigation.trading"), path: "/trading" },
+  { name: t("navigation.contact"), path: "/contact" },
 ];
 
 export const perks = [
   {
-    name: "Trusted & Regulated",
-    icon: MdOutlineShield, // Reference to the component, no JSX
+    nameKey: "perks.trusted",
+    icon: MdOutlineShield,
   },
   {
-    name: "Fast Deposit & Withdrawal",
-    icon: GiWallet, // Reference to the component
+    nameKey: "perks.fast",
+    icon: GiWallet,
   },
   {
-    name: "Risk Management",
-    icon: FaExclamationTriangle, // Reference to the component
+    nameKey: "perks.risk",
+    icon: FaExclamationTriangle,
   },
   {
-    name: "24/7 Customer Support",
-    icon: RiCustomerService2Fill, // Reference to the component
+    nameKey: "perks.support",
+    icon: RiCustomerService2Fill,
   },
 ];
 
 export const trackRecords = [
   {
-    name: "Years in the Market",
+    nameKey: "track.years",
     number: "5+",
   },
   {
-    name: "Withdrawals",
+    nameKey: "track.withdrawals",
     number: "500+ Million",
   },
   {
-    name: "Events",
+    nameKey: "track.events",
     number: "500+",
   },
   {
-    name: "Trading Assets",
+    nameKey: "track.assets",
     number: "100+",
   },
 ];
@@ -79,59 +73,59 @@ export const trackRecords = [
 export const ToInvest = [
   {
     icon: TbUserSquareRounded,
-    title: "Create an Account",
-    text: "Your first step to financial freedom is by creating an account with us.",
+    titleKey: "invest.createAccount.title",
+    textKey: "invest.createAccount.text",
   },
   {
     icon: BsBriefcaseFill,
-    title: "Choose a Package",
-    text: "Start investing by choosing a package that suits your budget/trading strategies and easily make deposits with reliable payment channels.",
+    titleKey: "invest.choosePackage.title",
+    textKey: "invest.choosePackage.text",
   },
   {
     icon: FaMoneyBillTransfer,
-    title: "Trade",
-    text: "Once deposit is confirmed, trades can immediately be placed with instant live updates.",
+    titleKey: "invest.trade.title",
+    textKey: "invest.trade.text",
   },
 ];
 
 export const tradingAssets = [
   {
     icon: SiGraphql,
-    title: "Instant Trading",
-    text: "Deposit is confirmed immediately after successful transaction to fund the account and trading can start instantly.",
+    titleKey: "tradingAssets.instantTrading.title",
+    textKey: "tradingAssets.instantTrading.text",
   },
   {
     icon: FiKey,
-    title: "Safe and Secure",
-    text: "Encryption of account is taking to a high degree for best secure protection.",
+    titleKey: "tradingAssets.safeSecure.title",
+    textKey: "tradingAssets.safeSecure.text",
   },
   {
     icon: FaBitcoin,
-    title: "Bitcoin Transaction",
-    text: "Encryption of account is taking to a high degree for best secure protection.",
+    titleKey: "tradingAssets.bitcoin.title",
+    textKey: "tradingAssets.bitcoin.text",
   },
 ];
 
 export const whyChoose = [
   {
     icon: RiShieldKeyholeFill,
-    title: "Secured & Regulated",
+    titleKey: "whyChoose.securedRegulated",
   },
   {
     icon: FaAward,
-    title: "Award Winning",
+    titleKey: "whyChoose.awardWinning",
   },
   {
     icon: MdBalance,
-    title: "Leverage",
+    titleKey: "whyChoose.leverage",
   },
   {
     icon: MdOutlineAutoGraph,
-    title: "Advanced Trading Platform",
+    titleKey: "whyChoose.advancedPlatform",
   },
   {
     icon: FaMagnifyingGlassDollar,
-    title: "500+ Trading Instruments",
+    titleKey: "whyChoose.tradingInstruments",
   },
 ];
 
@@ -139,156 +133,54 @@ export const testimony = [
   {
     image: "../../assets/headshot1.jpg",
     name: "Sarah M",
-    Designation: "Novice Trader",
-    testimony:
-      "I was new to Investing and felt overwhelmed by the complexity of the market. But this company made it easy for me to get started. Their platform is user-friendly, and the educational resources are top-notch. Within a few months, I started seeing consistent profits. The support team is always available to answer my questions. I couldn’t have asked for a better trading partner!",
+    designationKey: "testimonials.sarah.designation",
+    textKey: "testimonials.sarah.text",
     icon: FaXTwitter,
   },
   {
     image: "../../assets/headshot2.jpg",
     name: "James R",
-    Designation: "Experienced Investor",
-    testimony:
-      "Switching to this  company was the best decision I made for my investment portfolio. Their advanced tools and real-time market insights have given me a significant edge in my returns. I appreciate the transparency and security they provide, which is crucial in today’s volatile markets. Highly recommended for both beginners and seasoned traders!",
+    designationKey: "testimonials.james.designation",
+    textKey: "testimonials.james.text",
     icon: FaXTwitter,
   },
   {
     image: "../../assets/headshot3.jpg",
     name: "Emily T",
-    Designation: "Professional Trader",
-    testimony:
-      "I've been investing for years, but it wasn't until I joined this company that I truly started to maximize my potential. Their innovative trading strategies and automated tools have helped me make informed decisions with confidence. I also love their community of traders, where I can share ideas and get advice. It’s more than just a trading platform; it’s a comprehensive trading experience.",
+    designationKey: "testimonials.emily.designation",
+    textKey: "testimonials.emily.text",
     icon: FaXTwitter,
   },
 ];
-
 export const difference = [
-  {
-    id: 1,
-    point: (
-      <>
-        <span className="font-bold text-white">We Want You to Succeed</span> –
-        Learn from the best with our wide range of educational tools, economic
-        calendar, technical and fundamental analysis and important market
-        updates you don’t want to miss.
-      </>
-    ),
-  },
-  {
-    id: 2,
-    point: (
-      <>
-        <span className="font-bold text-white">
-          We Believe in Endless Possibilities{" "}
-        </span>
-         - Access the world’s most popular instruments, ranging from forex pairs
-        to cryptocurrencies - all at the palm of your hand.
-      </>
-    ),
-  },
-  {
-    id: 3,
-    point: (
-      <>
-        <span className="font-bold text-white">
-          We Provide Our Traders With Superior Trading Conditions
-        </span>
-         - No restrictions on short selling and scalping as well as ultra-low
-        spreads.
-      </>
-    ),
-  },
-  {
-    id: 4,
-    point: (
-      <>
-        <span className="font-bold text-white">We Value Your Time</span>– Enjoy
-        Fast and reliable order execution and a 24-hour live customer service.
-      </>
-    ),
-  },
-  {
-    id: 5,
-    point: (
-      <>
-        <span className="font-bold text-white">
-          We Believe You Deserve The Best
-        </span>
-         – Take advantage of our Expert Advisors and Copy Trading platforms as
-        well as 24/7 cryptocurrency trading.
-      </>
-    ),
-  },
-  {
-    id: 6,
-    point: (
-      <>
-        <span className="font-bold text-white">We Never Compromise</span> – With
-        regulatory licenses across 6 jurisdictions, we will ensure a hassle-free
-        trading experience.
-      </>
-    ),
-  },
+  { id: 1, titleKey: "difference.1.title", textKey: "difference.1.text" },
+  { id: 2, titleKey: "difference.2.title", textKey: "difference.2.text" },
+  { id: 3, titleKey: "difference.3.title", textKey: "difference.3.text" },
+  { id: 4, titleKey: "difference.4.title", textKey: "difference.4.text" },
+  { id: 5, titleKey: "difference.5.title", textKey: "difference.5.text" },
+  { id: 6, titleKey: "difference.6.title", textKey: "difference.6.text" },
 ];
 
 export const usefulLinks = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Plans",
-    link: "/plans",
-  },
-  {
-    name: "Login",
-    link: "/signin",
-  },
-  {
-    name: "Register",
-    link: "/signup",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
+  { name: "footer.links.home", link: "/" },
+  { name: "footer.links.about", link: "/about" },
+  { name: "footer.links.plans", link: "/plans" },
+  { name: "footer.links.login", link: "/signin" },
+  { name: "footer.links.register", link: "/signup" },
+  { name: "footer.links.contact", link: "/contact" },
 ];
 
 export const documents = [
-  {
-    name: "Terms & Conditions",
-    link: "/terms-condition",
-  },
-  {
-    name: "Privacy Policy",
-    link: "/privacy-policy",
-  },
-  {
-    name: "Trading Assets",
-    link: "#",
-  },
-  {
-    name: "Payment Policy",
-    link: "#",
-  },
-  {
-    name: "FAQ",
-    link: "#",
-  },
+  { name: "footer.documents.terms", link: "/terms-condition" },
+  { name: "footer.documents.privacy", link: "/privacy-policy" },
+  { name: "footer.documents.assets", link: "#" },
+  { name: "footer.documents.payment", link: "#" },
+  { name: "footer.documents.faq", link: "#" },
 ];
 
 export const contact = [
-  {
-    address:
-      "Tunofex Fx Market, 70 w. Madison Street, Ste. 1400 Chicago, 1160602",
-  },
-  {
-    address: "support@tunofexfxmarket.com",
-  },
+  { address: "footer.contact.address1" },
+  { address: "footer.contact.address2" },
 ];
 
 export const dashnavigation = [

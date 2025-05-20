@@ -56,7 +56,7 @@ function AdminPayments() {
 
   const showMessage = (text, type) => {
     setMessage({ text, type });
-    setTimeout(() => setMessage({ text: "", type: "" }), 3000);
+    setTimeout(() => setMessage(null), 3000);
   };
 
   const handleInvestorModal = (investor) => {
@@ -110,12 +110,10 @@ function AdminPayments() {
       if (!response.ok)
         throw new Error(data.message || "Failed to activate investor");
 
-      setMessage("Investor activated successfully");
-      setMessageType("success");
+      showMessage(`${data.message}`, "success");
       setInvestorModal(false);
     } catch (error) {
-      setMessage(`Error: ${error.message}`);
-      setMessageType("error");
+      showMessage(`${data.message}`, "error");
     }
   };
 
@@ -146,7 +144,7 @@ function AdminPayments() {
         {message && (
           <div
             className={`mt-4 p-3 rounded-md text-white transition-opacity duration-500 ${
-              messageType === "success" ? "bg-green-500" : "bg-red-500"
+              message.type === "success" ? "bg-green-500" : "bg-red-500"
             }`}
           >
             {message.text}

@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { testimony } from "../../data";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,15 +13,17 @@ import "swiper/css/navigation";
 import "./testimonialCarousel.css";
 
 function TestimonialCarousel() {
+  const { t } = useTranslation();
+
   return (
     <div className="innerWrapper bg-gradient-to-r from-blue-50 to-indigo-50 pt-2 pb-20">
       <div className="testimonialTitle mt-20 mb-20 w-full flex justify-center">
         <div className="titleContent flex-col text-center">
           <h1 className="font-extrabold text-4xl lg:text-6xl md:text-5xl">
-            Public Cheer for us
+            {t("testimonial.title")}
           </h1>
           <p className="lead text-lg md:text-2xl lg:text-2xl mt-2">
-            What Investors are saying about us...
+            {t("testimonial.subtitle")}
           </p>
         </div>
       </div>
@@ -56,7 +59,7 @@ function TestimonialCarousel() {
                           {item.name}
                         </h3>
                         <h5 className="text-sm text-gray-600">
-                          {item.Designation}
+                          {t(item.designationKey)}
                         </h5>
                       </div>
                     </div>
@@ -67,7 +70,7 @@ function TestimonialCarousel() {
                     </div>
                   </div>
                   <div className="bottom py-5">
-                    <p className="text-gray-700 italic">{item.testimony}</p>
+                    <p className="text-gray-700 italic">{t(item.textKey)}</p>
                   </div>
                 </div>
               </div>
